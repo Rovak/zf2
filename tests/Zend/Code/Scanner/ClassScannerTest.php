@@ -101,8 +101,8 @@ class ClassScannerTest extends TestCase
     
     public function testClassScannerCanScanAnnotations()
     {
-        $file    = new FileScanner(__DIR__ . '/../Annotation/TestAsset/EntityWithAnnotations.php');
-        $class   = $file->getClass('ZendTest\Code\Annotation\TestAsset\EntityWithAnnotations');
+        $file        = new FileScanner(__DIR__ . '/../Annotation/TestAsset/EntityWithAnnotations.php');
+        $class       = $file->getClass('ZendTest\Code\Annotation\TestAsset\EntityWithAnnotations');
         $annotations = $class->getAnnotations($this->manager);
         
         $this->assertTrue($annotations->hasAnnotation('ZendTest\Code\Annotation\TestAsset\Foo'));
